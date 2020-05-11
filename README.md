@@ -23,12 +23,12 @@ matrix3:
 | 1 2 |
 | 7 4 |
 
-matrixSum:
-| 8 3  |
+matrix1 + matrix2:
+| 8 3 |
 | 15 9 |
 
-matrix1.subtraction(matrix2):
-| -8 1  |
+matrix1 - matrix2:
+| -8 1 |
 | -1 -1 |
 
 matrix1 * matrix2:
