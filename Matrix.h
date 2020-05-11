@@ -13,22 +13,20 @@
 class Matrix {
 
 private:
-    List array;
-    int width, height;
+    List list;
 public:
-
-    Matrix();
 
     Matrix(const Matrix &m);
 
     Matrix(int width, int height);
 
-    Matrix(int width, int height, int defaultValue);
+    Matrix(int width, int height,int **arrayInt);
 
-    Matrix(int width, int height, List array);
+private:
+    Matrix();
+    Matrix(List array);
 
-    virtual ~Matrix();
-
+public:
     friend std::ostream &operator<<(std::ostream &os, Matrix *matrix);
     friend std::ostream &operator<<(std::ostream &os, const Matrix &matrix);
 
@@ -42,7 +40,6 @@ public:
 
     friend Matrix operator*(Matrix m1, Matrix m2);
 
-//    friend  Matrix operator=(const Matrix &m)
     int get(int width, int height) const;
 
     void set(int width, int height, int value);
@@ -58,9 +55,6 @@ public:
     int getWidth() const;
 
     int getHeight() const;
-
-
-    friend Matrix changeNum(Matrix m);
 
 private:
 
